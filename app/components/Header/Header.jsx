@@ -1,4 +1,6 @@
 import React from 'react'
+import LoginButton from './LoginButton'
+import AuthContextprovider from '@/lib/contexts/AuthContext'
 
 const Header = () => {
   return (
@@ -9,11 +11,12 @@ const Header = () => {
             <li>Blogs</li>
             <li>Contact</li>
         </ul>
-        <button className='bg-black text-white px-4 py-2 rounded-full flex items-center gap-2'>
-          <img className='h-7' src="/google.png" alt="" />
-            Sign in With Google
+      <AuthContextprovider>
+          <LoginButton/>
 
-        </button>
+      </AuthContextprovider>
+        
+        
     </nav>
   )
 }
