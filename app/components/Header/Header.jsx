@@ -9,7 +9,8 @@ const Header = () => {
             <li>Blogs</li>
             <li>Contact</li>
         </ul>
-        <button className='bg-blue-500 text-white px-4 py-2 rounded-full'>
+        <button className='bg-black text-white px-4 py-2 rounded-full flex items-center gap-2'>
+          <img className='h-7' src="/google.png" alt="" />
             Sign in With Google
 
         </button>
