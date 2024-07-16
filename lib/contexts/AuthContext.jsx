@@ -17,7 +17,7 @@ export default function AuthContextprovider({children}){
         setIsLoading(true)
         const unsubcribe=onAuthStateChanged(auth,(user)=>{
             if(user){
-                setUser(user.photoURL);
+                setUser(user);
                 
             }
                 else{
