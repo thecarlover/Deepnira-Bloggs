@@ -102,12 +102,17 @@ const Page = () => {
               required
             />
           </div>
+           {error && <p className='text-red-500 text-sm'>{error}</p>}
           <div className='flex items-center justify-between'>
+           
             <button
               type='submit'
+              disabled={loading||done}
               className='inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black'
+              
             >
-              Submit
+              {loading?"Have a Tea!!":"Create"}
+              
             </button>
             <button
               onClick={handleReset}

@@ -1,6 +1,8 @@
 "use client"
 
+import createNewCategory from '@/lib/firebase/category/write';
 import React, { createContext, useContext, useState } from 'react';
+
 
 const CategoryFormContext = createContext();
 
@@ -24,7 +26,8 @@ const CategoryFormContextProvider = ({ children }) => {
     setError(null);
     setLoading(true);
     try {
-      // Add your data creation logic here
+      await createNewCategory({data:data,image:image});
+
       setDone(true);
     } catch (error) {
       setError(error?.message);
